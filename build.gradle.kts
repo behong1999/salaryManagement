@@ -1,29 +1,29 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.6.10"
-    application
+  kotlin("jvm") version "1.6.10"
+  application
 }
 
 group = "me.dell"
 version = "1.0-SNAPSHOT"
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+  testImplementation(kotlin("test"))
 }
 
 tasks.test {
-    useJUnitPlatform()
+  useJUnitPlatform()
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+  kotlinOptions.jvmTarget = "1.8"
 }
 
 application {
-    mainClass.set("MainKt")
+  mainClass.set("MainKt")
 }
