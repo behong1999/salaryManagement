@@ -1,6 +1,6 @@
 package com.practice.classes
 
-class CommissionEmployee(id: Int, name: String, monthly_salary: Int, var commission: Int) : SalaryEmployee(id, name, monthly_salary) {
+class CommissionEmployee(id: Int, name: String, monthly_salary: Int, override var type: String = "C", override var commission: Int) : SalaryEmployee(id, name, type, monthly_salary) {
 
   override fun askSalary() {
     super.askSalary() // Call askSalary() of com.practice.classes.SalaryEmployee

@@ -1,6 +1,6 @@
 package com.practice.classes
 
-open class SalaryEmployee(id: Int, name: String, var monthly_salary: Int) : Employee(id, name) {
+open class SalaryEmployee(id: Int, name: String, override var type: String = "M", override var monthly_salary: Int) : Employee(id, name) {
 
   override fun askSalary() {
     print("Please enter monthly salary:")
